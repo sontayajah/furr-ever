@@ -10,8 +10,8 @@ function Hero() {
                     <p className="leading-relaxed">Every pet deserves a second chance at happiness. Whether you're looking for a playful kitten or a loyal dog, Start your adoption journey today.</p>
                 </div>
                 <div className="flex gap-8">
-                    <Link to="#" className="bg-black text-white px-6 py-3 rounded-lg font-medium active:bg-white active:text-black active:ring-1 active:ring-black">Adopt a Pet</Link>
-                    <Link to="#" className="ring-1 ring-black px-6 py-3 rounded-lg font-medium">Contact Us</Link>
+                    <Link to="/adopt" className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600">Adopt a Pet</Link>
+                    <Link to="#" className="ring-1 ring-orange-600 text-orange-600 px-6 py-3 rounded-lg font-medium">Contact Us</Link>
                 </div>
             </div>
             <img className='hidden lg:block' src="./src/assets/hero-image.png" alt='dog and cat'/>

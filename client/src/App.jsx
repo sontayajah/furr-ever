@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Layout from "./components/Layout"
 import Index from "./components/Index"
-import Adopt from "./components/Adopt"
+import Adopt from "./components/adopt/Adopt"
 import LostPets from "./components/LostPets"
 import Donate from "./components/Donate"
 import ContactUs from "./components/ContactUs"

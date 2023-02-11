@@ -5,11 +5,11 @@ import OurSuccess from './index/Success/OurSuccess'
 
 function Index() {
   return (
-    <div>
+    <>
       <Hero />
       <AdoptCard />
       <OurSuccess />
-    </div>
+    </>
   )
 }
 
