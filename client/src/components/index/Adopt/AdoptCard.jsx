@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function AdoptCard() {
   return (
     <div className="flex flex-col gap-8 my-32 items-center justify-center px-40">
-      <SectionHead head="Adopt" subheadFirst="New Best Friend Wanted: Adopt Today" />
+      <SectionHead head="Adopt" subheadFirst="New Best Friend Wanted:" subheadSecond="Adopt Today"/>
       <div className="flex flex-col gap-4 w-full">
         <div className='flex justify-between'>
           <h1 className='font-bold text-lg'>Latest Pets</h1>

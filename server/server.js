@@ -19,6 +19,7 @@ app.use(cors());
 // Routes
 app.use('/', require('./routes/index'))
 app.use('/adopt', require('./routes/adopt'))
+app.use('/pets', require('./routes/pets'))
 app.use('/lost-pets', require('./routes/lost-pets'))
 app.use('/donate', require('./routes/donate'))
 app.use('/contact-us', require('./routes/contact-us'))

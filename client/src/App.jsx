@@ -3,9 +3,10 @@ import Layout from "./components/Layout"
 import Index from "./components/Index"
 import Adopt from "./components/adopt/Adopt"
 import LostPets from "./components/LostPets"
-import Donate from "./components/Donate"
+import Donation from "./components/Donation"
 import ContactUs from "./components/ContactUs"
 import './App.css'
+import AddAPet from "./components/adopt/AddAPet"
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Index />} />
         <Route path="/adopt" element={<Adopt />} />
+        <Route path="/adopt/add" element={<AddAPet />} />
         <Route path="/lost-pets" element={<LostPets />} />
-        <Route path="/donate" element={<Donate />} />
+        <Route path="/donation" element={<Donation />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Route>
     </Routes>

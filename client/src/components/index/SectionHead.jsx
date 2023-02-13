@@ -13,8 +13,8 @@ function SectionHead({ head, subheadFirst, subheadSecond }) {
                 </svg>
 
             </div>
-            <p className="text-2xl">{subheadFirst}</p>
-            {subheadSecond && <p className="text-2xl">{subheadSecond}</p>}
+            <p className="text-lg lg:text-2xl">{subheadFirst}</p>
+            {subheadSecond && <p className="text-lg lg:text-2xl">{subheadSecond}</p>}
         </div>
     )
 }

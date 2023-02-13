@@ -1,0 +1,31 @@
+GET http://localhost:3000/pets HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3001/pets HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "My first post",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "author": "John Doe",
+    "date-time": "2019-01-01 12:00:00"
+}
+
+###
+
+PUT http://localhost:3001/posts/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "My first post 2",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "author": "John Doe",
+    "date-time": "2019-01-01 12:00:00"
+}
+
+###
+
+DELETE http://localhost:3001/posts/1 HTTP/1.1
+Content-Type: application/json

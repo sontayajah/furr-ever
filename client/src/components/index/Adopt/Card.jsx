@@ -7,7 +7,7 @@ function Card({ name, breed, status, age, gender, image }) {
             <img className="w-[240px] h-[185px] object-cover rounded-lg" src={image} />
             <div className="flex flex-col gap-3">
                 <div className="flex justify-between text-sm font-semibold">
-                    <p className="text-[#C7C7C7]">{age} | {gender}</p>
+                    <p className="text-[#C7C7C7]">{age} Months | {gender}</p>
                     <p className="text-red-600">{status == "Available" ? <span className="text-green-500">AVAILABLE</span> : <span className="text-red-600">ADOPTED</span>}</p>
                 </div>
                 <div className="flex justify-between">

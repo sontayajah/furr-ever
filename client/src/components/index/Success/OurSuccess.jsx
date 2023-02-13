@@ -20,13 +20,13 @@ function OurSuccess() {
                         <p className='font-bold mt-1'>Lost Pets Reunification</p>
                     </div>
                 </div>
-                <div className='flex flex-col gap-4 items-center'>
+                {/* <div className='flex flex-col gap-4 items-center'>
                     <img src="./src/assets/lostpets.png" className='w-[160px]' />
                     <div className='text-center'>
                         <p className='text-orange-400 font-extrabold text-5xl'>3,000 +</p>
                         <p className='font-bold mt-1'>Lost Pets Reunification</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
