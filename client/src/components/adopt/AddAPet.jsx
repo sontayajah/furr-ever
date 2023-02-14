@@ -64,29 +64,29 @@ const AddAPet = () => {
 
     return (
         <div className="mt-12 mb-16">
-            <SectionHead head="Adopt" subheadFirst="Add a Pet" />
+            <SectionHead head="Adopt" subheadFirst="Add New Pet" />
             <form className="flex flex-col px-40 gap-8 items-center mt-8">
-                <div>
-                    <label className='mr-4'>Type: </label>
-                    <input type="text" name="type" value={value.type} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder="Cat or Dog" />
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Type: </label>
+                    <input type="text" name="type" value={value.type} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder="Cat or Dog" />
                 </div>
-                <div>
-                    <label className='mr-4'>Name: </label>
-                    <input type="text" name="name" value={value.name} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder="Pet name" />
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Name: </label>
+                    <input type="text" name="name" value={value.name} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder="Pet name" />
                 </div>
-                <div>
-                    <label className='mr-4'>Age: </label>
-                    <input type="text" name="age" value={value.age} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder="Age in month" />
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Age: </label>
+                    <input type="text" name="age" value={value.age} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder="Age in month" />
                 </div>
-                <div>
-                    <label className='mr-4'>Gender: </label>
-                    <input type="text" name="gender" value={value.gender} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder="Male or Female" />
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Gender: </label>
+                    <input type="text" name="gender" value={value.gender} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder="Male or Female" />
                 </div>
-                <div>
-                    <label className='mr-4'>Breed: </label>
-                    <input type="text" name="breed" value={value.breed} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder='Pet Breed' />
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Breed: </label>
+                    <input type="text" name="breed" value={value.breed} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder='Pet Breed' />
                 </div>
-                <button onClick={handleSubmit} type="submit" value="Submit" className="w-min px-16 font-bold py-2 bg-orange-600 text-white rounded-md active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600" >Add</button>
+                <button onClick={handleSubmit} type="submit" value="Submit" className="w-max px-16 font-bold py-3 mt-8 bg-orange-600 text-white rounded-md active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600" >Add New Pet</button>
             </form>
         </div>
     )

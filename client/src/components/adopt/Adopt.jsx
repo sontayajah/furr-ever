@@ -10,15 +10,19 @@ function Adopt() {
   const [filteredPets, setFilteredPets] = useState(null)
   const [searchText, setSearchText] = useState('')
   const [activeBtn, setActiveBtn] = useState('All')
-
-  function handleCategoryChange(e) {
-    setCategory(e.target.value)
-  }
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
+
     axios.get('http://localhost:3000/pets')
       .then((res) => setAllPets(res.data))
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err)
+        setLoading(false);
+      })
+
+    setLoading(false);
   }, [])
 
   useEffect(() => {
@@ -53,7 +57,9 @@ function Adopt() {
           <button value="Dog" onClick={handleCategoryChange} className={`${activeBtn == 'Dog' ? 'bg-orange-600 text-white' : 'bg-white text-orange-600'} px-4 rounded-l-md rounded-r-2xl py-2`}>DOG</button>
         </div>
         <SearchPets setSearchText={setSearchText} />
-        <Link to="./add" className="text-center w-44 px-8 py-4 bg-orange-600 text-white rounded-lg font-bold">+ Add a Pet</Link>
+        <div className="text-center w-64 py-4 bg-orange-600 text-white rounded-lg font-bold">
+          <Link to="./add">+ Add New Pet</Link>
+        </div>
       </div>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(264px,_1fr))] gap-y-9 w-full justify-items-center px-40 mt-4">
         {filteredPets && filteredPets.map((pet) => (<Card key={pet._id} name={pet.name} breed={pet.breed} status={pet.status} age={pet.age} gender={pet.gender} image={pet.image} />))}

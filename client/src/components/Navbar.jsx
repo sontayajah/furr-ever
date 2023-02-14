@@ -12,8 +12,8 @@ function Navbar() {
           <Link to="/" className="font-medium hover:text-orange-600">Home</Link>
           <Link to="/adopt" className="font-medium hover:text-orange-600">Adopt</Link>
           <Link to="/lost-pets" className="font-medium hover:text-orange-600">Lost Pets</Link>
-          <Link to="/donation" className="font-medium hover:text-orange-600">Donation</Link>
-          <Link to="/contact-us" className="font-medium hover:text-orange-600">Contact Us</Link>
+          {/* <Link to="/donation" className="font-medium hover:text-orange-600">Donation</Link>
+          <Link to="/contact-us" className="font-medium hover:text-orange-600">Contact Us</Link> */}
         </div>
       {/* </div> */}
       <div className="flex gap-4 items-center">

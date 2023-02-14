@@ -23,6 +23,7 @@ app.use('/pets', require('./routes/pets'))
 app.use('/lost-pets', require('./routes/lost-pets'))
 app.use('/donate', require('./routes/donate'))
 app.use('/contact-us', require('./routes/contact-us'))
+app.use('/auth', require('./routes/auth'))
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
