@@ -37,26 +37,25 @@ const AddAPet = () => {
         }
     }
 
-    const getImage = () => {
-        axios.get(`https://api.unsplash.com/photos/random?client_id=6ovrfINpYlBZ_Yn1_vHntwC5tAPj9XerRWBl5KNsTW4&query=${value.breed}&count=1`)
-            .then((res) => setValue({
-                ...value,
-                image: res.data[0].urls.regular
-            }))
-    }
-
     useEffect(() => {
-        getImage()
+        axios.get(`https://api.unsplash.com/photos/random?client_id=6ovrfINpYlBZ_Yn1_vHntwC5tAPj9XerRWBl5KNsTW4&query=${value.breed + " " + value.type}&count=1`)
+            .then((res) => setValue({ ...value, image: res.data[0].urls.regular }))
+            // .then((res) => console.log(res.data))
+            .catch((err) => console.log(err))
     }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await getImage()
-        console.log(value);
+        // await axios.get(`https://api.unsplash.com/search/photos/?client_id=6ovrfINpYlBZ_Yn1_vHntwC5tAPj9XerRWBl5KNsTW4&query=${value.breed + " " + value.type}&page=1&per_page=1`)
+        //     // .then((res) => console.log(res.data.results[0].urls.regular))
+        //     .then((res) => setValue({ ...value, image: res.data.results[0].urls.regular }))
+        //     .catch((err) => console.log(err))
 
-        await axios.post("http://localhost:3000/pets", value)
+        axios.post("http://localhost:3000/pets", value)
             .catch((err) => console.log(err))
+
+        // console.log(value);
 
         alert("Success")
 
@@ -66,7 +65,7 @@ const AddAPet = () => {
     return (
         <div className="mt-12 mb-16">
             <SectionHead head="Adopt" subheadFirst="Add a Pet" />
-            <form method='post' onSubmit={handleSubmit} className="flex flex-col px-40 gap-8 items-center mt-8">
+            <form className="flex flex-col px-40 gap-8 items-center mt-8">
                 <div>
                     <label className='mr-4'>Type: </label>
                     <input type="text" name="type" value={value.type} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder="Cat or Dog" />
@@ -87,7 +86,7 @@ const AddAPet = () => {
                     <label className='mr-4'>Breed: </label>
                     <input type="text" name="breed" value={value.breed} onChange={handleChange} className="py-1 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black" placeholder='Pet Breed' />
                 </div>
-                <button type="submit" value="Submit" className="w-min px-16 font-bold py-2 bg-orange-600 text-white rounded-md active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600" >Add</button>
+                <button onClick={handleSubmit} type="submit" value="Submit" className="w-min px-16 font-bold py-2 bg-orange-600 text-white rounded-md active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600" >Add</button>
             </form>
         </div>
     )
