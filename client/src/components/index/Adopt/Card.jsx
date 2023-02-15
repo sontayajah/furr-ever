@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Card({ name, breed, status, age, gender, image }) {
+function Card({ id, name, breed, status, age, gender, image }) {
     return (
         <div className="flex flex-col gap-3 rounded-lg bg-white overflow-hidden p-3 shadow-lg">
             <img className="w-[240px] h-[185px] object-cover rounded-lg" src={image} />
@@ -14,7 +14,7 @@ function Card({ name, breed, status, age, gender, image }) {
                     <p className="font-bold text-xl">{name}</p>
                     <p className="text-[#C7C7C7] font-bold">{breed}</p>
                 </div>
-                <Link to="" className="text-sm px-3 py-1 ring-2 ring-orange-400 rounded-full text-orange-400 font-bold w-max">Read more</Link>
+                <Link to={`pets?id=${id}`} className="text-sm px-3 py-1 ring-2 ring-orange-400 rounded-full text-orange-400 font-bold w-max">Read more</Link>
             </div>
         </div>
     )

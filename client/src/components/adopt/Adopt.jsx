@@ -10,19 +10,19 @@ function Adopt() {
   const [filteredPets, setFilteredPets] = useState(null)
   const [searchText, setSearchText] = useState('')
   const [activeBtn, setActiveBtn] = useState('All')
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
 
     axios.get('http://localhost:3000/pets')
       .then((res) => setAllPets(res.data))
       .catch((err) => {
         console.log(err)
-        setLoading(false);
+        // setLoading(false);
       })
 
-    setLoading(false);
+    // setLoading(false);
   }, [])
 
   useEffect(() => {
@@ -62,7 +62,7 @@ function Adopt() {
         </div>
       </div>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(264px,_1fr))] gap-y-9 w-full justify-items-center px-40 mt-4">
-        {filteredPets && filteredPets.map((pet) => (<Card key={pet._id} name={pet.name} breed={pet.breed} status={pet.status} age={pet.age} gender={pet.gender} image={pet.image} />))}
+        {filteredPets && filteredPets.map((pet) => (<Card key={pet._id} id={pet._id} name={pet.name} breed={pet.breed} status={pet.status} age={pet.age} gender={pet.gender} image={pet.image} />))}
       </div>
       {filteredPets?.length == 0 && <div className="text-center mt-4">ไม่พบสัตว์เลี้ยง</div>}
     </div>

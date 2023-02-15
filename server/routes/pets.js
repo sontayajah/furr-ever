@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const { image, type, name, age, gender, breed, status } = req.body;
+        const { image, type, name, age, gender, breed, description, status } = req.body;
 
         const pet = new Pets({
             image,
@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
             age,
             gender,
             breed,
+            description,
             status
         })
 

@@ -19,6 +19,9 @@ const petsSchema = new mongoose.Schema({
     breed: {
         type: String
     },
+    description: {
+        type: String
+    },
     status: {
         type: String,
         default: "Available"

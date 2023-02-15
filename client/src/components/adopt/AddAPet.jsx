@@ -13,6 +13,7 @@ const AddAPet = () => {
         age: '',
         gender: '',
         breed: '',
+        description: ''
     })
 
     const handleChange = (e) => {
@@ -32,6 +33,9 @@ const AddAPet = () => {
             case 'breed':
                 setValue({ ...value, breed: e.target.value })
                 break;
+            case 'description':
+                    setValue({ ...value, description: e.target.value })
+                    break;
             default:
                 break;
         }
@@ -85,6 +89,10 @@ const AddAPet = () => {
                 <div className='flex flex-col'>
                     <label className='mb-2'>Breed: </label>
                     <input type="text" name="breed" value={value.breed} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder='Pet Breed' />
+                </div>
+                <div className='flex flex-col'>
+                    <label className='mb-2'>Description: </label>
+                    <input type="text" name="description" value={value.description} onChange={handleChange} className="pl-4 py-2 px-2 shadow-lg w-96 rounded-sm ring-1 ring-black focus:ring-orange-600 focus:border-orange-600 focus:ring-2 focus:outline-none" placeholder='Pet Description' />
                 </div>
                 <button onClick={handleSubmit} type="submit" value="Submit" className="w-max px-16 font-bold py-3 mt-8 bg-orange-600 text-white rounded-md active:bg-white active:text-orange-600 active:ring-1 active:ring-orange-600" >Add New Pet</button>
             </form>

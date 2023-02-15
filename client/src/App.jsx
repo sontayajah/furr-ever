@@ -7,6 +7,7 @@ import Donation from "./components/Donation"
 import ContactUs from "./components/ContactUs"
 import './App.css'
 import AddAPet from "./components/adopt/AddAPet"
+import PetsDetail from "./components/adopt/PetsDetail"
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/adopt/add" element={<AddAPet />} />
+        <Route path="/adopt/pets" element={<PetsDetail />} />
+        <Route path="/pets" element={<PetsDetail />} />
         <Route path="/lost-pets" element={<LostPets />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/contact-us" element={<ContactUs />} />
